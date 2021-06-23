@@ -180,7 +180,8 @@
         ],
         "mingw": [
             {
-                "arch": "mingw-w64-x86_64",
+                "arch": "mingw-w64-ucrt-x86_64",
+                "exec_dir": "C:/msys64/ucrt64/bin",
                 "runtime_packages": [
                     {
                         "name": "clang",
@@ -207,13 +208,16 @@
                 ],
                 "additional_packages": [
                     "clang-tools-extra",
+                    "dlfcn",
                     "libxml2",
+                    "libyaml",
                     "llvm",
                     "toolchain"
                 ]
             },
             {
-                "arch": "mingw-w64-i686",
+                "arch": "mingw-w64-x86_64",
+                "exec_dir": "C:/msys64/mingw64/bin",
                 "runtime_packages": [
                     {
                         "name": "clang",
@@ -239,7 +243,45 @@
                     }
                 ],
                 "additional_packages": [
+                    "clang-tools-extra",
+                    "dlfcn",
                     "libxml2",
+                    "libyaml",
+                    "llvm",
+                    "toolchain"
+                ]
+            },
+            {
+                "arch": "mingw-w64-i686",
+                "exec_dir": "C:/msys64/mingw32/bin",
+                "runtime_packages": [
+                    {
+                        "name": "clang",
+                        "executables": [
+                            "clang",
+                            "g++",
+                            "gcc"
+                        ]
+                    },
+                    {
+                        "name": "cmake",
+                        "executables": [
+                            "cmake",
+                            "cpack",
+                            "ctest"
+                        ]
+                    },
+                    {
+                        "name": "ragel",
+                        "executables": [
+                            "ragel"
+                        ]
+                    }
+                ],
+                "additional_packages": [
+                    "dlfcn",
+                    "libxml2",
+                    "libyaml",
                     "llvm",
                     "toolchain"
                 ]
